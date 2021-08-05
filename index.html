@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="media.css">
+  <title>Frontend Mentor | Calculator app</title>
+  <script src="app.js"></script>
+</head>
+<body id="bdcolor">
+  <div class="titleSel">
+    <h5>calc</h5>
+      <div class="themebox">
+        <p>THEME</p>
+          <div class="whlSwt">
+            <div class="labels">
+              <label for="th1">1</label>
+              <label for="th2">2</label>
+              <label for="th3">3</label>
+            </div>
+            <div class="switch 3Way" id="sldrBG">
+              <input type="radio" id="th1" name="theme" class="theme1" onclick="themebttn1()">
+              <span class="slider" id="sldr"></span> 
+              <input type="radio" id="th2" name="theme" class="theme2" onclick="themebttn2()">
+              <input type="radio" id="th3" name="theme" class="theme3" onclick="themebttn3()">
+            </div>
+          </div>
+      </div>  
+  </div>    
+  <div class="calculator">      
+    <input type="text" class="screen" id="scrnCol" value="" disabled /> 
+    <div class="calculator-keys">
+      <section id="calcBG">          
+          
+
+        <button class="bttn bntCol1" type="button" value="7">7</button>
+        <button class="bttn bntCol1" type="button" value="8">8</button>
+        <button class="bttn bntCol1" type="button" value="9">9</button>
+        <button class="bttn bntCol2 delete" type="button" value="DEL">DEL</button>
+      
+      
+        <button class="bttn bntCol1" type="button" value="4">4</button>
+        <button class="bttn bntCol1" type="button" value="5">5</button>
+        <button class="bttn bntCol1" type="button" value="6">6</button>
+        <button class="bttn bntCol1 operador" type="button" name="mais" value="+">+</button>
+      
+      
+        <button class="bttn bntCol1" type="button" value="1">1</button>
+        <button class="bttn bntCol1" type="button" value="2">2</button>
+        <button class="bttn bntCol1" type="button" value="3">3</button>
+        <button class="bttn bntCol1 operador" type="button" name="menos" value="-">-</button>
+      
+      
+        <button class="bttn bntCol1 decimal" type="button" value=".">.</button>
+        <button class="bttn bntCol1" type="button" value="0">0</button>
+        <button class="bttn bntCol1 operador" type="button" value="/">/</button>
+        <button class="bttn bntCol1 operador" type="button" value="*">x</button>
+      
+      
+        <button class="bttn bntCol2 col2 clearbt" type="button">RESET</button>
+        <button class="bttn col3 result operador" id="btnCol3" type="button" value="="> = </button>
+                    
+            
+      </section>
+    </div>
+  </div> 
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank" id="lnkCol">Frontend Mentor</a>. 
+    Coded by <a id="lnkCol" href="https://github.com/ivancda">Ivan Coelho</a>.
+  </div>
+</body>
+
+</html>

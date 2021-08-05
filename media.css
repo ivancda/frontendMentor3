@@ -1,0 +1,33 @@
+@media (min-width: 800px){
+
+  .bttn{
+    height: 2em;
+    width: 3em;
+    font-size: 32px;
+    border-radius: 10px;
+    margin: 0.3em;
+  }
+  .bntCol2{
+    margin: 0.3em;
+  }
+  .col3{
+    width: 6.6em;
+  }
+  .bntCol2{
+    font-size: 16px;
+    height: 4em;
+    width: 6em;
+    margin: 0.6em;
+  }
+  .col2{
+    width: 13.2em;
+  }
+  .screen{
+    font-size: 48px;
+    width: 9.3em;
+    height: 1.5em;
+  }
+  .titleSel{
+    width: 15.2em;
+  }
+}
