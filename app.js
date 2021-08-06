@@ -162,106 +162,30 @@ document.addEventListener("DOMContentLoaded", function () {
 
 //O MALDITO BOTAO MALIGNO
  
-
-//vi no stackoverflow que para manipular style de classes é necessário criar
-//um var para armazenar a informação que contem todos os elementos da classe desejada
-var btnColor1 = document.getElementsByClassName("bntCol1");
-var btnColor2 = document.getElementsByClassName("bntCol2");
- 
-//aqui começa as funções de mudança de tema, que são chamados a partir da ativação
-//dos input radio no html
+// function to set a given theme/color-scheme
+function setTheme(themeName) {
+  localStorage.setItem('theme', themeName);
+  document.documentElement.className = themeName;
+}
 
 //TEMA AZUL ESCURO
 function themebttn1(){
   document.getElementById("sldr").style.left = "3px";
-  document.getElementById("bdcolor").style.backgroundColor = "hsl(222, 26%, 31%)";
-  document.getElementById("bdcolor").style.color = "white";
-  document.getElementById("lnkCol").style.color = "white";
-  document.getElementById("scrnCol").style.backgroundColor = "hsl(224, 36%, 15%)";
-  document.getElementById("scrnCol").style.color = "white";
-  document.getElementById("sldrBG").style.backgroundColor = "hsl(223, 31%, 20%)";
-  document.getElementById("sldr").style.backgroundColor = "hsl(6, 63%, 50%)";
-  document.getElementById("calcBG").style.backgroundColor = "hsl(223, 31%, 20%)";
-  document.getElementById("btnCol3").style.backgroundColor = "hsl(6, 63%, 50%)";
-  document.getElementById("btnCol3").style.color = "white";
-  document.getElementById("btnCol3").style.boxShadow = "0px -4px 0px 0px hsl(6, 70%, 34%) inset";
-  changeColor(btnColor1, "hsl(30, 25%, 89%)")
-  changeTColor(btnColor1, "hsl(221, 14%, 31%)")
-  changeBColor(btnColor1, "0px -4px 0px 0px hsl(28, 16%, 65%) inset")
-  changeColor(btnColor2, "hsl(225, 21%, 49%)")
-  changeTColor(btnColor2, "white")
-  changeBColor(btnColor2, "0px -4px 0px 0px hsl(224, 28%, 35%) inset")  
+  setTheme("theme-1")
 }
 
 //TEMA BRANCO
 function themebttn2(){
   document.getElementById("sldr").style.left = "24px";
-  document.getElementById("bdcolor").style.backgroundColor = "hsl(0, 0%, 90%)";
-  document.getElementById("bdcolor").style.color = "hsl(60, 10%, 19%)";
-  document.getElementById("lnkCol").style.color = "hsl(60, 10%, 19%)";
-  document.getElementById("scrnCol").style.backgroundColor = "hsl(0, 0%, 93%)";
-  document.getElementById("scrnCol").style.color = "hsl(60, 10%, 19%)";
-  document.getElementById("sldrBG").style.backgroundColor = "hsl(0, 5%, 81%)";
-  document.getElementById("sldr").style.backgroundColor = "hsl(25, 98%, 40%)";
-  document.getElementById("calcBG").style.backgroundColor = "hsl(0, 5%, 81%)";
-  document.getElementById("btnCol3").style.backgroundColor = "hsl(25, 98%, 40%)";
-  document.getElementById("btnCol3").style.color = "white";
-  document.getElementById("btnCol3").style.boxShadow = "0px -4px 0px 0px hsl(25, 99%, 27%) inset";
-  changeColor(btnColor1, "hsl(45, 7%, 89%)")
-  changeTColor(btnColor1, "hsl(60, 10%, 19%)")
-  changeBColor(btnColor1, "0px -4px 0px 0px hsl(35, 11%, 61%) inset")
-  changeColor(btnColor2, "hsl(185, 42%, 37%)")
-  changeTColor(btnColor2, "white")
-  changeBColor(btnColor2, "0px -4px 0px 0px hsl(185, 58%, 25%) inset")  
+  setTheme("theme-2")
 }
 
 //TEMA ROXO
 function themebttn3(){
   document.getElementById("sldr").style.left = "44px";
-  document.getElementById("bdcolor").style.backgroundColor = "hsl(268, 75%, 9%)";
-  document.getElementById("bdcolor").style.color = "hsl(52, 100%, 62%)";
-  document.getElementById("lnkCol").style.color = "hsl(52, 100%, 62%)";
-  document.getElementById("scrnCol").style.backgroundColor = "hsl(268, 71%, 12%)";
-  document.getElementById("scrnCol").style.color = "hsl(52, 100%, 62%)";
-  document.getElementById("sldrBG").style.backgroundColor = "hsl(268, 71%, 12%)";
-  document.getElementById("sldr").style.backgroundColor = "hsl(176, 100%, 44%)";
-  document.getElementById("calcBG").style.backgroundColor = "hsl(268, 71%, 12%)";
-  document.getElementById("btnCol3").style.backgroundColor = "hsl(176, 100%, 44%)";
-  document.getElementById("btnCol3").style.color = "hsl(198, 20%, 13%)";
-  document.getElementById("btnCol3").style.boxShadow = "0px -4px 0px 0px hsl(177, 92%, 70%) inset";
-  changeColor(btnColor1, "hsl(268, 47%, 21%)")
-  changeTColor(btnColor1, "hsl(52, 100%, 62%)")
-  changeBColor(btnColor1, "0px -4px 0px 0px hsl(290, 70%, 36%) inset")
-  changeColor(btnColor2, "hsl(281, 89%, 26%)")
-  changeTColor(btnColor2, "white")
-  changeBColor(btnColor2, "0px -4px 0px 0px hsl(285, 91%, 52%) inset")  
+  setTheme("theme-3")
 }
 
-//a função abaixo foi copiada do stackoverflow e pelo o que eu entendi
-//ela armazena todas as atribuição de estilo das classes inseridas nas nossas
-//variaveis acima na unidade coll, e substitui pelo valor de color, que podemos 
-//informar. 
-function changeColor(coll, color){
-
-  for(var i=0, len=coll.length; i<len; i++)
-  {
-      coll[i].style["background-color"] = color;
-  }
-}
-function changeTColor(coll, color){
-
-  for(var i=0, len=coll.length; i<len; i++)
-  {
-      coll[i].style["color"] = color;
-  }
-}
-function changeBColor(coll, color){
-
-  for(var i=0, len=coll.length; i<len; i++)
-  {
-      coll[i].style["box-shadow"] = color;
-  }
-}
 /*                                 ___
                                ,-""   `.
                              ,'  _   e )`-._
